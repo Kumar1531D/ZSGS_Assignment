@@ -5,27 +5,27 @@ public class PythagoreanTriplet
 {
     public static void main(String[] args) 
     {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the integer N: ");
-		int N=sc.nextInt();
-		List<List<Integer>> triplets=getTriplets(N);
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter the integer : ");
+		int n=in.nextInt();
+		List<List<Integer>> triplets=getTriplets(n);
 		if(triplets.size()>0)
 		{
-			System.out.println("There Pythagorean triplets are");
-		    System.out.println(triplets);
+			System.out.println("The Pythagorean triplets are");
+			System.out.println(triplets);
 		}
 		else
 			System.out.println("There are no Pythagorean triplets");
-	    sc.close();
+	    in.close();
 	}
-    public static List<List<Integer>> getTriplets(int N)
+    public static List<List<Integer>> getTriplets(int n)
     {
     	List<List<Integer>> triplets=new ArrayList<>();
-        for (int a = 1; a < N / 3; a++) 
+        for (int a = 1; a < n / 3; a++) 
         {
-            for (int b = a + 1; b < N / 2; b++) 
+            for (int b = a + 1; b < n / 2; b++) 
             {
-                int c = N - a - b;
+                int c = n - a - b;
                 if (a*a + b*b == c*c) 
                 {
                 	triplets.add(new ArrayList<Integer>(Arrays.asList(a,b,c)));
