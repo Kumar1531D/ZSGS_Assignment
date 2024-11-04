@@ -4,14 +4,14 @@ public class RainDrops
 {
     public static void main(String[] args) 
     {
-		Scanner sc=new Scanner(System.in);
+		Scanner in=new Scanner(System.in);
 		System.out.print("Enter the number: ");
-		int num=sc.nextInt();
-		String sound=rainDropSound(num);
+		int num=in.nextInt();
+		String sound=rainDrop(num);
 		System.out.println(sound);
-		sc.close();
+		in.close();
 	}
-    public static String rainDropSound(int num)
+    public static String rainDrop(int num)
     {
         StringBuilder sound=new StringBuilder();
         if(num%3==0)
@@ -25,28 +25,3 @@ public class RainDrops
         return sound.toString();
     }
 }
-
-/*
-OUTPUT
-
-Enter the number: 9
-Pling
-
-Enter the number: 25
-Plang
-
-Enter the number: 49
-Plong
-
-Enter the number: 30
-PlingPlang
-
-Enter the number: 70
-PlangPlong
-
-Enter the number: 42
-PlingPlong
-
-Enter the number: 105
-PlingPlangPlong
-*/
