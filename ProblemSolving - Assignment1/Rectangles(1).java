@@ -66,10 +66,11 @@ public class Rectangles
 
     public static void main(String[] args) 
     {
-        Scanner sc = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         List<char[]> lines = new ArrayList<>();
 
         System.out.println("Enter the ASCII diagram (empty line to end):");
+        
         while (true) 
         {
             String line = sc.nextLine();
@@ -79,10 +80,10 @@ public class Rectangles
             }
             lines.add(line.toCharArray());
         }
-        sc.close();
+        
         char[][] diagram = lines.toArray(new char[0][]);
         int rectangles = countRectangles(diagram);
+        
         System.out.println("Total rectangles: " + rectangles);
-        System.out.println();
     }
 }
